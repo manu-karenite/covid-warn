@@ -1,3 +1,10 @@
+# for client 
+client/node_modules
+
+#for server
+
+
+
 # Logs
 logs
 *.log
