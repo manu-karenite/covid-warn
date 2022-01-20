@@ -5,7 +5,8 @@ const getStateDetailAxios = async (code) => {
     method: "GET",
     url: "https://data.incovid19.org/v4/min/data.min.json",
   });
-  return result;
+  console.log(code, result);
+  return result.data[code];
 };
 
 export { getStateDetailAxios };
