@@ -3,8 +3,7 @@ import React from "react";
 function DistrictCard({ districtReport }) {
   return (
     <>
-      {JSON.stringify(districtReport)}
-      <table className="table table-striped table-dark">
+      <table className="table table-striped table-bordered table-dark table-hover text-center mt-3">
         <thead>
           <tr>
             <th scope="col">District</th>
@@ -14,9 +13,9 @@ function DistrictCard({ districtReport }) {
             {districtReport[0] && districtReport[0][1]?.delta?.recovered && (
               <th scope="col">Recovered Today</th>
             )}
-            <th scope="col">Vaccinated-1 Today</th>
-            <th scope="col">Vaccinated-2 Today</th>
-            <th scope="col">Vaccinated-3 Today</th>
+            <th scope="col">Dose-1 Today</th>
+            <th scope="col">Dose-2 Today</th>
+            <th scope="col">Booster Dose Today</th>
           </tr>
         </thead>
         <tbody>
@@ -25,7 +24,7 @@ function DistrictCard({ districtReport }) {
               curr[0] !== "Other State" &&
               curr[0] !== "Unknown" && (
                 <tr key={index}>
-                  <td>{curr[0]}</td>
+                  <td className="font-weight-bold">{curr[0]}</td>
                   {curr[1]?.delta?.confirmed && (
                     <td>{curr[1]?.delta?.confirmed}</td>
                   )}
