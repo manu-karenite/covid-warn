@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcovid=self.webpackChunkcovid||[]).push([[170],{9170:function(e,t,n){n.r(t);n(2791);var c=n(184);t.default=function(){return(0,c.jsx)("div",{className:"jumbotron display-6 text-center text-success mt-2 mb-3 ",style:{fontSize:"50px",fontWeight:"bold",letterSpacing:"2.5px"},children:(0,c.jsx)("b",{children:"Covid Counter"})})}}}]);
+//# sourceMappingURL=170.b593e26f.chunk.js.map
