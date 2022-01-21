@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { Menu } from "antd";
 import {
   MailOutlined,
+  GithubOutlined,
   AppstoreOutlined,
   SettingOutlined,
 } from "@ant-design/icons";
@@ -15,7 +16,6 @@ const Header = () => {
   const dispatch = useDispatch();
   const [state, setState] = useState("home");
   const handleClick = (e) => {
-    console.log(e);
     setState(e.key);
   };
   const clickHandler = (e) => {
@@ -24,12 +24,25 @@ const Header = () => {
       type: "STATE",
       payload: null,
     });
+    dispatch({
+      type: "SEARCH",
+      payload: [],
+    });
     navigate("/");
   };
   return (
     <Menu onClick={handleClick} selectedKeys={[state]} mode="horizontal">
       <Menu.Item key="home" icon={<AppstoreOutlined />} onClick={clickHandler}>
         Home
+      </Menu.Item>
+      <Menu.Item className="float-end" key="github" icon={<GithubOutlined />}>
+        <a
+          href="https://github.com/manu-karenite/covid-warn"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Source Code
+        </a>
       </Menu.Item>
     </Menu>
   );
