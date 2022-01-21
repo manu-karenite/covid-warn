@@ -9,22 +9,28 @@ import CardContent from "@mui/material/CardContent";
 import Avatar from "@mui/material/Avatar";
 
 import Typography from "@mui/material/Typography";
-import { red } from "@mui/material/colors";
 
 import { useSelector } from "react-redux";
 import { ISO, images, name } from "../../Resources/ISOCode.js";
 export default function StateCard({ total, meta }) {
-  const { state } = useSelector((state) => ({ ...state }));
-  const indexIs = ISO.indexOf(state);
-  console.log("META : ", new Date(meta), console.log(typeof new Date(meta)));
-  console.log(total);
+  let { state } = useSelector((state) => ({ ...state }));
+  let indexIs;
+  if (state) {
+    indexIs = ISO.indexOf(state);
+  } else {
+    indexIs = ISO.indexOf("IN");
+  }
+  if (!state) {
+    state = "IN";
+  }
+
   //creatimg an object out of it..........
   let totalObject = {};
   for (let i = 0; i < total.length; i++) {
     const newArr = total[i];
     totalObject[newArr[0]] = newArr[1];
   }
-  console.log(totalObject);
+
   const [R, G, B] = [
     Math.floor(Math.random() * 255),
     Math.floor(Math.random() * 255),
