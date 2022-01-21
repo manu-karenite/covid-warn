@@ -1,21 +1,22 @@
 import "./App.css";
-import { Fragment } from "react";
-
-//importing routing in App.js
-import { Link, Routes, Route, Navigate } from "react-router-dom";
+//importing React Components
+import { lazy, Suspense } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+
 //importing utilities in the App.js
-import Header from "./Components/Navigation/Header.js";
-import SideMenu from "./Components/Navigation/SideMenu.js";
-import Title from "./Components/Navigation/Title.js";
+const Header = lazy(() => import("./Components/Navigation/Header.js"));
+const SideMenu = lazy(() => import("./Components/Navigation/SideMenu.js"));
+const Title = lazy(() => import("./Components/Navigation/Title.js"));
+
 //importing pages on web App
-import Home from "./Pages/Home.js";
-import State from "./Pages/State.js";
+const Home = lazy(() => import("./Pages/Home.js"));
+const State = lazy(() => import("./Pages/State.js"));
 
 function App() {
   const { state } = useSelector((state) => ({ ...state }));
   return (
-    <Fragment>
+    <Suspense fallback={`Loading in Progress!`}>
       <Header />
       <div className="container-fluid">
         <div className="row">
@@ -33,7 +34,7 @@ function App() {
           </div>
         </div>
       </div>
-    </Fragment>
+    </Suspense>
   );
 }
 
