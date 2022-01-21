@@ -44,8 +44,10 @@ const zones = {
       slug: "dadra-and-nagar-haveli-and-daman-and-diu",
       code: "w3",
     },
+    { name: "Rajasthan", slug: "rajasthan", code: "w4" },
   ],
   NorthernZone: [
+    //8
     { name: "Chandigarh", slug: "chandigarh", code: "n1" },
     { name: "Delhi", slug: "delhi", code: "n2" },
     {

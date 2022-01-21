@@ -29,6 +29,7 @@ const slugs = [
   "gujarat",
   "goa",
   "dadra-and-nagar-haveli-and-daman-and-diu",
+  "rajasthan",
   //for north zone....
   "chandigarh",
   "delhi",
@@ -67,6 +68,7 @@ const ISO = [
   "GJ",
   "GA",
   "DN",
+  "RJ",
   "CH",
   "DL",
   "HR",
@@ -75,6 +77,7 @@ const ISO = [
   "LA",
   "PB",
   "UT",
+  "IN",
 ];
 const images = [
   "https://res.cloudinary.com/techbuy/image/upload/v1642609186/COVID/BIHAR_le3fbq.png",
@@ -107,6 +110,7 @@ const images = [
   "https://res.cloudinary.com/techbuy/image/upload/v1642690352/COVID/gujarat_euzy9j.png",
   "https://res.cloudinary.com/techbuy/image/upload/v1642690352/COVID/ddd_ncck65.png",
   "https://res.cloudinary.com/techbuy/image/upload/v1642690352/COVID/ddd_ncck65.png",
+  "https://res.cloudinary.com/techbuy/image/upload/v1642706024/COVID/RAJ_dpfskx.png",
   //north india.....
   "https://res.cloudinary.com/techbuy/image/upload/v1642690639/COVID/chandigarh_ne8dx6.png",
   "https://res.cloudinary.com/techbuy/image/upload/v1642690640/COVID/delhi_evkiws.png",
@@ -116,6 +120,7 @@ const images = [
   "https://res.cloudinary.com/techbuy/image/upload/v1642690638/COVID/ladakh_bixucp.png",
   "https://res.cloudinary.com/techbuy/image/upload/v1642690638/COVID/punja_pdrxyg.png",
   "https://res.cloudinary.com/techbuy/image/upload/v1642690638/COVID/punja_pdrxyg.png",
+  "https://res.cloudinary.com/techbuy/image/upload/v1642693937/COVID/india_rwvlkg.jpg",
 ];
 const name = [
   "Bihar",
@@ -145,6 +150,7 @@ const name = [
   "Gujarat",
   "Goa",
   "Dadra and Nagar Haveli and Daman & Diu",
+  "Rajasthan",
   "Chandigarh",
   "Delhi",
   "Haryana",
@@ -153,6 +159,7 @@ const name = [
   "Ladakh",
   "Punjab",
   "Uttarakhand",
+  "India",
 ];
 
 export { slugs, ISO, images, name };
