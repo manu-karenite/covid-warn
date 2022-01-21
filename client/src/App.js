@@ -2,7 +2,7 @@ import "./App.css";
 import { Fragment } from "react";
 
 //importing routing in App.js
-import { Link, Routes, Route } from "react-router-dom";
+import { Link, Routes, Route, Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 //importing utilities in the App.js
 import Header from "./Components/Navigation/Header.js";
@@ -27,6 +27,8 @@ function App() {
             <Routes>
               <Route path="/" exact element={<Home />} />
               <Route path="/state/:state_code" exact element={<State />} />
+
+              <Route path="*" element={<Navigate replace to="/" />} />
             </Routes>
           </div>
         </div>
