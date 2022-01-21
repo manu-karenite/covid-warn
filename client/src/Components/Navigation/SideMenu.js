@@ -53,7 +53,7 @@ const SideMenu = (e) => {
           );
         })}
       </SubMenu>
-      <SubMenu key="sub3" icon={<AppstoreOutlined />} title="South India">
+      <SubMenu key="sub3" icon={<MenuOutlined />} title="South India">
         {zones.SouthZone.map((curr) => {
           return (
             <Menu.Item
@@ -78,7 +78,7 @@ const SideMenu = (e) => {
           );
         })}
       </SubMenu>
-      <SubMenu key="sub5" icon={<AppstoreOutlined />} title="West India">
+      <SubMenu key="sub5" icon={<MenuOutlined />} title="West India">
         {zones.WesternZone.map((curr) => {
           return (
             <Menu.Item
